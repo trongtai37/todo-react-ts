@@ -1,38 +1,131 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 14px;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 1.6rem;
+}
+
+.container form {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+form input,
+form button {
+  padding: 10px;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 1.4rem;
+}
+
+form input {
+  background-color: rgba(126, 122, 122, 0.1);
+}
+
+form button {
+  background-color: orange;
+}
+
+.statistic {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 40%;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+}
+
+.todo-list {
+  width: 100%;
+}
+
+.row {
+  padding: 5px 10px;
+}
+
+ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  font-size: 1.5rem;
+}
+
+.content {
+  cursor: pointer;
+}
+
+ul li button {
+  display: inline-flex;
+  align-items: center;
+  height: 30px;
+  padding: 5px;
   color: white;
+  background: red;
+  border: 1px solid rgba(126, 122, 122, 0.1);
+  font-size: 1.2rem;
 }
 
-.App-link {
-  color: #61dafb;
+ul li:nth-child(odd) {
+  background-color: rgba(126, 122, 122, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+ul li .delete-button {
+  justify-self: end;
+}
+
+ul li input {
+  margin-right: 10px;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.done {
+  background-color: rgb(131, 230, 131) !important;
+}
+
+input[type='checkbox'] {
+  transform: scale(1.3);
+  width: 20px;
+}
+
+@media (min-width: 600px) {
+  .todo-container {
+    max-width: 50%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
