@@ -1,5 +1,5 @@
 const idGenerator = function* () {
-  let i = 3;
+  let i = 6;
   while (true) {
     yield i++;
   }
